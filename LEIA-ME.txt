@@ -1,0 +1,33 @@
+DADOS BRUTOS ORIGINAIS
+======================
+
+Os sete arquivos exatamente como foram baixados das fontes, sem nenhum
+recorte, filtro ou alteração. SNIS e IDEB aqui são NACIONAIS.
+
+Como usar com os scripts do pacote de análise (analise.zip):
+
+  1. Copie esta pasta para dentro da pasta do pacote de análise.
+  2. Abra recortar_brutos.py e ajuste a constante ORIGINAIS para apontar
+     para cá:  ORIGINAIS = Path("dados_brutos_originais")
+  3. Rode:  python3 recortar_brutos.py
+     Isso regenera dados_brutos/ a partir destes arquivos.
+  4. Siga a partir do passo 1 do README (build.py).
+
+O MD5SUMS.txt permite conferir a integridade:  md5sum -c MD5SUMS.txt
+
+Conteúdo
+--------
+br_mdr_snis_municipio_agua_esgoto_csv.gz
+    SNIS, agua e esgoto por municipio, via Base dos Dados.
+    119.256 linhas, 27 UFs, 1995-2022, 133 colunas.
+
+divulgacao_anos_iniciais_municipios_2025.xlsx   (14.533 linhas, 133 col)
+divulgacao_anos_finais_municipios_2025.xlsx     (14.428 linhas, 122 col)
+    IDEB por municipio, rede publica, serie historica ate 2025 - INEP.
+    Cabecalho real na linha 10.
+
+tabela4714__1_.xlsx        IBGE/Censo 2022 - densidade demografica
+tabela5938_22_13_15.xlsx   IBGE/Contas Regionais - PIB a precos correntes
+tabela6892__1_.xlsx        IBGE/Censo 2022 - domicilios e coleta de lixo
+tabela9923.xlsx            IBGE/Censo 2022 - populacao total e urbana
+    Ja sao estaduais (645 municipios de SP). Usadas sem alteracao.
